@@ -1,0 +1,4 @@
+%dw 2.0
+
+type auto_29677e85_34a0_4cdd_8583_23b300b837dd_Output_Payload = Array<{  cab_ID?: Number,   Price: Number,   origin: String,   destination: String,   company: String,   _?: Any}>
+

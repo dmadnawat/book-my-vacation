@@ -1,0 +1,27 @@
+%dw 2.0
+
+type auto_df4ef153_4603_4113_bc14_18b9dc6489ee_Input_Attributes = {|
+  clientCertificate?: {|
+    publicKey?: {|  |}, 
+    "type"?: String, 
+    encoded?: Binary
+  |}, 
+  headers: {|  |}, 
+  listenerPath: String, 
+  method: String, 
+  queryParams: {|
+    origin: "BLR" | "NDLS" | "BPL", 
+    destination: "BLR" | "NDLS" | "BPL", 
+    departureDate: String
+  |}, 
+  queryString: String, 
+  relativePath: String, 
+  remoteAddress: String, 
+  requestPath: String, 
+  requestUri: String, 
+  scheme: String, 
+  uriParams: {|  |}, 
+  version: String, 
+  localAddress: String
+|}
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:wsc="http://www.mulesoft.org/schema/mule/wsc" xmlns:cabs-booking="http://www.mulesoft.org/schema/mule/cabs-booking"
+	xmlns:indigo-flights-api="http://www.mulesoft.org/schema/mule/indigo-flights-api"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/indigo-flights-api http://www.mulesoft.org/schema/mule/indigo-flights-api/current/mule-indigo-flights-api.xsd
+http://www.mulesoft.org/schema/mule/cabs-booking http://www.mulesoft.org/schema/mule/cabs-booking/current/mule-cabs-booking.xsd
+http://www.mulesoft.org/schema/mule/wsc http://www.mulesoft.org/schema/mule/wsc/current/mule-wsc.xsd">
+	<indigo-flights-api:config name="Indigo_flights_api_Config" doc:name="Indigo-flights-api Config" doc:id="2864a17a-4fd1-4e51-805c-1ae579205e71" property_host="indigo-flight-hardev.us-e2.cloudhub.io" property_port="80" property_protocol="HTTP" property_basePath="/api" />
+	<cabs-booking:config name="Cabs_Booking_Config" doc:name="Cabs Booking Config" doc:id="fe94ac48-c566-47e1-b589-6df854da82c3" property_host="cab-book-hardev.us-e2.cloudhub.io" property_port="80" property_protocol="HTTP" property_basePath="/api" />
+	<wsc:config name="Web_Service_Consumer_Config" doc:name="Web Service Consumer Config" doc:id="1de48ff9-9908-4fb5-8249-14fa77429f56" >
+		<wsc:connection wsdlLocation="http://taj-hotel-hardev.us-e2.cloudhub.io/hotel/default_Port?wsdl" service="hotel" port="default_Port" address="http://taj-hotel-hardev.us-e2.cloudhub.io/hotel/default_Port" />
+	</wsc:config>
+</mule>
